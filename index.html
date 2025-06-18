@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabetic.com - Premium Brandable Domain for Sale</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --dark: #111827;
+            --light: #F9FAFB;
+            --accent: #8B5CF6;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Animated Gradient Background */
+        .hero-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            z-index: -2;
+        }
+        
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212,175,55,0.1) 0%, rgba(212,175,55,0) 70%);
+            animation: rotate 20s linear infinite;
+            z-index: -1;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        header {
+            text-align: center;
+            padding: 8rem 0 6rem;
+            position: relative;
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            margin: 0 auto 1.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            line-height: 1.2;
+            max-width: 900px;
+        }
+        
+        .tagline {
+            font-size: 1.8rem;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            font-weight: 300;
+            color: #4B5563;
+        }
+        
+        .domain-display-container {
+            perspective: 1000px;
+            margin: 3rem 0;
+        }
+        
+        .domain-display {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            font-weight: 700;
+            color: var(--dark);
+            display: inline-block;
+            padding: 2rem 3rem;
+            border-radius: 16px;
+            margin: 1rem 0;
+            background: white;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0,0,0,0.05);
+            transform-style: preserve-3d;
+            transform: rotateX(5deg);
+            position: relative;
+            transition: all 0.5s ease;
+        }
+        
+        .domain-display:hover {
+            transform: rotateX(0deg) scale(1.02);
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.15);
+        }
+        
+        .domain-display::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 5%;
+            width: 90%;
+            height: 30px;
+            background: var(--gold);
+            filter: blur(20px);
+            z-index: -1;
+            opacity: 0.7;
+            transition: all 0.5s ease;
+        }
+        
+        .domain-display:hover::after {
+            opacity: 0.9;
+            height: 40px;
+            filter: blur(25px);
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--dark);
+            color: white;
+            padding: 1.5rem 3rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: all 0.5s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        
+        .cta-primary {
+            background: var(--gold);
+            color: var(--dark);
+            font-weight: 700;
+        }
+        
+        .highlight-section {
+            background: white;
+            padding: 6rem 0;
+            position: relative;
+        }
+        
+        .highlight-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d4af37' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        .section-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 4rem;
+            color: var(--dark);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.03);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 0;
+            background: var(--gold);
+            transition: all 0.5s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-card:hover::before {
+            height: 100%;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--gold);
+        }
+        
+        .feature-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+        
+        .feature-desc {
+            color: #4B5563;
+            font-size: 1.1rem;
+        }
+        
+        .pricing-section {
+            padding: 6rem 0;
+            text-align: center;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            position: relative;
+        }
+        
+        .price-tag {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin: 2rem 0;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .price-tag::before {
+            content: '$';
+            position: absolute;
+            left: -1.5rem;
+            top: 1rem;
+            font-size: 2rem;
+        }
+        
+        .price-note {
+            font-size: 1.2rem;
+            color: #64748B;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+        
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .payment-method {
+            background: white;
+            padding: 1.5rem 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .payment-method:hover {
+            transform: translateY(-5px);
+        }
+        
+        .payment-method img {
+            height: 30px;
+        }
+        
+        .testimonial-section {
+            padding: 6rem 0;
+            background: white;
+        }
+        
+        .testimonial {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: #374151;
+            padding: 0 2rem;
+        }
+        
+        .testimonial-author {
+            margin-top: 2rem;
+            font-weight: 600;
+            font-style: normal;
+        }
+        
+        .final-cta {
+            padding: 8rem 0;
+            text-align: center;
+            background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+        }
+        
+        .final-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            color: var(--dark);
+        }
+        
+        .final-cta p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            color: #4B5563;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-link {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-link:hover {
+            color: var(--gold);
+        }
+        
+        .copyright {
+            color: #9CA3AF;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            .domain-display {
+                font-size: 3rem;
+                padding: 1.5rem 2rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .price-tag {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-wrapper">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <header>
+                <h1>Own <span style="color: var(--gold);">Fabetic.com</span> - The Ultimate Brandable Domain</h1>
+                <p class="tagline">A premium .com domain that combines elegance, memorability, and limitless branding potential</p>
+                <div class="domain-display-container">
+                    <div class="domain-display">FABETIC.COM</div>
+                </div>
+                <div class="cta-buttons">
+                    <a href="#inquiry" class="cta-button cta-primary">MAKE AN OFFER</a>
+                    <a href="https://sedo.com" class="cta-button">BUY VIA SEDO</a>
+                </div>
+            </header>
+        </div>
+    </div>
+    
+    <section class="highlight-section">
+        <div class="container">
+            <h2 class="section-title">10 Premium Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">①</div>
+                    <h3 class="feature-title">Exceptional Brandability</h3>
+                    <p class="feature-desc">Fabetic is short, catchy, and easy to remember - the perfect foundation for any luxury or lifestyle brand.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">②</div>
+                    <h3 class="feature-title">Premium .COM Extension</h3>
+                    <p class="feature-desc">The most valuable and recognized domain extension worldwide, instantly establishing credibility.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">③</div>
+                    <h3 class="feature-title">Versatile Applications</h3>
+                    <p class="feature-desc">Perfect for fashion, beauty, tech, or any upscale brand looking for a sophisticated name.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">④</div>
+                    <h3 class="feature-title">Global Appeal</h3>
+                    <p class="feature-desc">Easily pronounceable and memorable across multiple languages and cultures.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⑤</div>
+                    <h3 class="feature-title">SEO-Friendly</h3>
+                    <p class="feature-desc">Clean, keyword-free structure that won't limit your branding or marketing directions.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⑥</div>
+                    <h3 class="feature-title">Investment Grade</h3>
+                    <p class="feature-desc">Premium domains have consistently appreciated in value over time, often outperforming traditional investments.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⑦</div>
+                    <h3 class="feature-title">Instant Recognition</h3>
+                    <p class="feature-desc">Stands out in crowded marketplaces and social media platforms.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⑧</div>
+                    <h3 class="feature-title">Trademark Potential</h3>
+                    <p class="feature-desc">Unique enough to secure trademarks in multiple categories.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⑨</div>
+                    <h3 class="feature-title">Social Media Availability</h3>
+                    <p class="feature-desc">Matching handles are still available on major platforms.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⑩</div>
+                    <h3 class="feature-title">Future-Proof</h3>
+                    <p class="feature-desc">Timeless appeal that won't become dated as trends change.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="pricing-section">
+        <div class="container">
+            <h2 class="section-title">Own This Premium Domain</h2>
+            <div class="price-tag">1288</div>
+            <p class="price-note">Price is negotiable for serious buyers. All reasonable offers will be considered.</p>
+            <div class="payment-methods">
+                <div class="payment-method">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/SEDO_logo.svg/1200px-SEDO_logo.svg.png" alt="Sedo">
+                </div>
+                <div class="payment-method">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Afternic_logo.svg/1200px-Afternic_logo.svg.png" alt="Afternic">
+                </div>
+                <div class="payment-method">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Escrow.com_logo.svg/1200px-Escrow.com_logo.svg.png" alt="Escrow">
+                </div>
+            </div>
+            <p>Secure transactions through trusted domain marketplaces. The domain will be transferred only after payment verification.</p>
+        </div>
+    </section>
+    
+    <section class="testimonial-section">
+        <div class="container">
+            <div class="testimonial">
+                "Premium domains like Fabetic.com are the digital equivalent of prime real estate. They appreciate in value while giving your brand instant credibility in crowded markets."
+                <div class="testimonial-author">— Domain Investor Magazine</div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="final-cta" id="inquiry">
+        <div class="container">
+            <h2>Ready to Own Fabetic.com?</h2>
+            <p>This premium domain won't be available for long. Contact us today to discuss purchase options or make an offer.</p>
+            <div class="cta-buttons">
+                <a href="mailto:info@davidconnects.com?subject=Fabetic.com Purchase Inquiry" class="cta-button cta-primary">EMAIL TO PURCHASE</a>
+                <a href="https://sedo.com" class="cta-button">MAKE OFFER VIA SEDO</a>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-logo">FABETIC.COM</div>
+            <div class="footer-links">
+                <a href="#inquiry" class="footer-link">Make an Offer</a>
+                <a href="https://sedo.com" class="footer-link">Buy via Sedo</a>
+                <a href="mailto:info@davidconnects.com" class="footer-link">Contact</a>
+            </div>
+            <div class="copyright">© 2023 Fabetic.com - All Rights Reserved</div>
+        </div>
+    </footer>
+</body>
+</html>
